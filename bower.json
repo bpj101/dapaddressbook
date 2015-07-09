@@ -1,0 +1,18 @@
+{
+  "name": "testbook",
+  "version": "0.0.0",
+  "authors": [
+    "Paul Julian <bpj101@dameagnesproductions.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.2"
+  }
+}
