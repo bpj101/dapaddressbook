@@ -64,8 +64,8 @@ describe('The Address Book App', function () {
 
     it('should throw an error on an incompatible type', function () {
       assert.throws(function () {
-        proper(undefined)
+        proper(undefined);
       });
     });
-  })
+  });
 });
