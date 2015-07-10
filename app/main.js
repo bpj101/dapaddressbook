@@ -28,5 +28,17 @@ angular.module('AddressBook', [])
       return name.toString().split(' ').map(function (word) {
         return word[0].toUpperCase().concat(word.slice(1));
       }).join(' ');
+    };
+  })
+  .directive('avatar', [
+
+    function () {
+      return {
+        restrict: 'AE',
+        scope: {
+          name: '='
+        },
+        template: '<span class="avatar">{{name[0] | proper}}</span>'
+      };
     }
-  });
+  ]);
