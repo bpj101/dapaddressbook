@@ -1,10 +1,14 @@
 var express = require('express');
+var cors = require('cors');
+
 var app = express();
+app.use(cors());
+
 
 var contacts = [{
   name: "Dennis"
 }, {
-  mame: "Frank"
+  name: "Frank"
 }];
 
 app.get('/contacts', function (req, res) {
