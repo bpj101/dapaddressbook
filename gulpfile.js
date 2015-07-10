@@ -5,7 +5,7 @@ var browserSync = require('browser-sync');
 var karma = require('karma').server;
 var server = require('gulp-live-server');
 
-gulp.task('server',function(){
+gulp.task('server', function () {
   var live = new server('server.js');
   live.start();
 })
@@ -30,9 +30,24 @@ gulp.task('test-browser', function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true,
-    reporters: ['mocha']
-  }, done);
+    reporters: ['mocha', 'coverage']
+  }, function () {
+    done();
+  });
 });
+
+gulp.task('serve-coverage', ['test-browser'], function () {
+  browserSync.init({
+    notify: false,
+    port: 7777,
+    server: {
+      baseDir: ["test/coverage"]
+    }
+  })
+
+  gulp.watch(['app/**/*.*'])
+    .on('change', browserSync.reload);
+})
 
 gulp.task('serve-test', function () {
   browserSync.init({

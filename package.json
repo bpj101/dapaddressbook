@@ -14,12 +14,17 @@
     "express": "^4.13.1",
     "gulp": "^3.9.0",
     "gulp-live-server": "0.0.23",
+    "istanbul": "^0.3.17",
     "karma": "^0.12.37",
+    "karma-coverage": "^0.4.2",
     "karma-mocha": "^0.2.0",
     "mocha": "^2.2.5"
   },
   "devDependencies": {
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.2",
     "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
     "phantomjs": "^1.9.17"
   }
 }
