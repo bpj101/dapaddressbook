@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>DAP AddressBook</title>
   <script src="bower_components/angular/angular.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  
 </head>
 <body ng-app="AddressBook">
-  <h1>DAP AddressBook</h1>
+  <div class="app-title">
+    <h1>DAP AddressBook</h1>
+    <h2>Contactical</h2>
+  </div>
   <div ng-controller="ContactCtrl" class="contact-list inline-module">
     <div ng-repeat='contact in contacts'>
             <h4>
