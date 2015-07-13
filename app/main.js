@@ -51,6 +51,7 @@ angular.module('AddressBook', [])
   function ($scope, contactService) {
     $scope.addContact = function () {
       contactService.addContact($scope.contact);
+      $scope.contact = {};
     };
   }
 ]);

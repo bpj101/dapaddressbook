@@ -6,11 +6,23 @@
   <script src="bower_components/angular/angular.js"></script>
 </head>
 <body ng-app="AddressBook">
-  <h1>Hello World!</h1>
-  <div ng-controller="ContactCtrl">
-    <div ng-repeat="contact in contacts">
-      {{contact.name}}
-      <avatar name=contact.name></avatar>
+  <h1>DAP AddressBook</h1>
+  <div ng-controller="ContactCtrl" class="contact-list inline-module">
+    <div ng-repeat='contact in contacts'>
+            <h4>
+                <span class=contact-name>
+                        {{contact.name | proper}}
+                </span>
+                <avatar name=contact.name></avatar>
+            </h4>
+            <p>
+                {{contact.occupation}}
+            </p>
+            <p>
+                <a href="mailto:{{contact.email}}">
+                    {{contact.email}}
+                </a>
+             </p>
     </div>
   </div>
   <div ng-controller=AddContact class="add-contact inline-module">
